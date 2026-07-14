@@ -1,12 +1,15 @@
 import React from 'react'
 import Sagnik from './Sagnik'
 import UseState from './Hooks/UseState'
+import Register from './Hooks/Register'
+import UseEfect from './Hooks/UseEfect'
 
 const App = () => {
   return (
     <div>
       {/* <h1>Hello</h1> */}
-      <UseState/>
+      <Register/>
+      
     </div>
   )
 }
