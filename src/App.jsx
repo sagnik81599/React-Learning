@@ -1,20 +1,29 @@
-import React from 'react'
-import Sagnik from './Sagnik'
-import UseState from './Hooks/UseState'
-import Register from './Hooks/Register'
-import UseEfect from './Hooks/UseEfect'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import UseState from "./Hooks/UseState";
+import Register from "./Hooks/Register";
+import UseEfect from "./Hooks/UseEfect";
+import Useref from "./Hooks/Useref";
+import PrevCount from "./Hooks/prevCount";
+import Sagnik from "./Sagnik";
 
 const App = () => {
   return (
-    <div>
-      {/* <h1>Hello</h1> */}
-      <Register/>
-      
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Sagnik />} />
+        <Route path="/UseState" element={<UseState />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/UseEffect" element={<UseEfect />} />
+        {/* <Route path="/UseRef" element={<Useref />} /> */}
+        <Route path="/PrevCount" element={<PrevCount />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
 
 
 // import { useState } from 'react'
